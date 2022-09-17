@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-image: url(./assets/bg.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+body * {
+  font-family: "Montserrat", sans-serif;
+  line-height: 160%;
+}
+
+header {
+  padding-top: 32px;
+  height: calc(120px + 32px);
+}
+
+header div {
+  display: flex;
+  width: 120px;
+  margin: auto;
+  padding: 4px;
+  border-radius: 50%;
+
+  background-image: linear-gradient(90deg, #c91842 0%, #5cc2e2 100%);
+
+  transition: transform 0.3s;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header div img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 32px auto;
+
+  display: grid;
+  gap: 24px;
+}
+
+section {
+  padding-top: 4px;
+  border-radius: 8px;
+
+  color: #fff;
+  background-image: linear-gradient(90deg, #c91842 0%, #5cc2e2 100%);
+}
+
+section div {
+  background-color: #262629;
+  padding: 32px;
+  padding-top: 24px;
+  border-radius: 8px;
+}
+
+section h2 {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+section p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.18px;
+  color: #c1c1c1;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+section ul li {
+  transition: transform 0.3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+.tmdb-list img {
+  width: 100px;
+  height: 150px;
+  border: 1px solid #555555;
+  border-radius: 8px;
+}
+
+header div {
+  animation: fromTop 0.7s 0.2s backwards;
+}
+
+main section {
+  animation: fromBottom 0.7s backwards;
+}
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+main section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+main section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
